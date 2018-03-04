@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/komatis/Documents/swift-alerts-mobile/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/komatis/Documents/swift-alerts-mobile/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/komatis/Documents/swift-alerts-mobile/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h

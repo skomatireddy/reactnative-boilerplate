@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/komatis/Documents/swift-alerts-mobile/android/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/komatis/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/2fcaa613d47fa5274de50b86a4b9f693/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "232"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "505"
+                    }
+                },
+                {
+                    "source": "/Users/komatis/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.3.1.aar/67c1eb6a6c74ad83a47213777de1219e/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
+                    }
+                }
+            ]
+        }
+    ]
+}
