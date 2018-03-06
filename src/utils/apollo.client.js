@@ -4,22 +4,23 @@ import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 // import { Constants } from './constants';
 
-const hostUrl = 'https://localhost:8888';
+const hostUrl = 'https://dizzee-dev.umusic.com/graphql';
 
 const httpLink = createHttpLink({
-  uri: `${hostUrl}/graphql`,
-  credentials: 'include'
+  uri: `${hostUrl}`
+  // credentials: 'include'
 });
 
-const authLink = setContext((_, { headers }) => {
+const authLink = setContext((_, { headers }) =>
   // return the headers to the context so httpLink can read them
-  return {
+  ({
     headers: {
       ...headers,
-      Application: 'swiftAlertsMobile'
+      Application: 'swiftTrends',
+      'Content-Type': 'application/json',
+      Cookie: 'swiftTrends=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlNyaWthbnRoLktvbWF0aXJlZGR5QHVtdXNpYy5jb20iLCJpYXQiOjE1MjAzNTc5MjYsImV4cCI6MTUyMDM4NjcyNn0.3cd4IWJTTXLwArecJ0YWHMXY9L0wcFCwH50L1yvMSj4'
     }
-  };
-});
+  }));
 
 const client = new ApolloClient({
   // By default, this client will send queries to the

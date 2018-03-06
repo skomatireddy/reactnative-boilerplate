@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
  * Create the store with dynamic reducers
  */
@@ -9,7 +10,7 @@ import createReducer from './reducers';
 
 const sagaMiddleware = createSagaMiddleware();
 
-export default function configureStore(initialState = {}) {
+export default function configureStore() {
   // Create the store with two middlewares
   // 1. sagaMiddleware: Makes redux-sagas work
   const middlewares = [

@@ -1,4 +1,4 @@
-#Sat Mar 03 13:49:46 PST 2018
-base.0=/Users/komatis/Documents/swift-alerts-mobile/android/app/build/intermediates/transforms/dexMerger/debug/125
+#Tue Mar 06 09:53:32 PST 2018
+base.0=/Users/komatis/Documents/swift-alerts-mobile/android/app/build/intermediates/transforms/dexMerger/debug/163
 path.0=classes.dex
 renamed.0=classes.dex

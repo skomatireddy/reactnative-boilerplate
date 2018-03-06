@@ -68,3 +68,13 @@ export const getUserFromToken = gql`
     }
   }
 `;
+
+export const searchArtistQuery = gql`
+query SearchArtists($searchText: String!, $paging: Paging) {
+    searchArtists(searchText: $searchText, paging: $paging) {
+    _id
+    name
+    image
+  }
+}
+`;

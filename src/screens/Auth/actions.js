@@ -3,9 +3,7 @@ import {
   LOGIN_COMPLETED,
   LOGIN_ERROR,
   GET_USEROBJECT,
-  USER_OBJECT,
-  SHOW_MODAL,
-  HIDE_MODAL
+  USER_OBJECT
 } from './constants';
 
 export function login(user) {
@@ -37,20 +35,9 @@ export function getUserObjectFromToken(token) {
 }
 
 export function receiveUserObjectFromToken(userobject) {
+  console.log('user obj', userobject);
   return {
     type: USER_OBJECT,
     payload: userobject
-  };
-}
-
-export function showModalFromHeader() {
-  return {
-    type: SHOW_MODAL,
-  };
-}
-
-export function hideModalFromHeader() {
-  return {
-    type: HIDE_MODAL,
   };
 }

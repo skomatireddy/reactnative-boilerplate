@@ -33,10 +33,10 @@ function authReducer(state = initialState, action) {
     case GET_USEROBJECT:
       return state;
     case USER_OBJECT:
-      console.log('user object', action.payload);
+      console.log('user object', action.payload.data.getUserFromToken);
       return {
         ...state,
-        userObject: action.payload
+        userObject: action.payload.data.getUserFromToken
       };
     default:
       return state;

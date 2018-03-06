@@ -1,6 +1,5 @@
-import { call, put, takeLatest, select } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import request from '../../utils/request';
-import { makeSelectUserToken } from './selectors';
 import {
   LOGIN,
   LOGIN_ERROR,
@@ -9,28 +8,24 @@ import {
 import {
   loginCompleted,
   loginError,
-  receiveUserObjectFromToken,
-  getUserObjectFromToken
+  receiveUserObjectFromToken
 } from './actions';
 import client from '../../utils/apollo.client';
 import { getUserFromToken } from '../../queries/index';
+import { initializeArtists, initializeSubs } from '../ArtistsScreen/actions';
 // const hostUrl = process.env.API_HOST;
-const DIZZEE_WHOAMI = 'https://10.130.172.228:8888/api/whoami?app=swiftTrends';
 const DIZZEE_LOGIN = 'https://192.168.0.10:8888/service/login?app=swiftTrends';
-const DIZZEE_LOGOUT = 'https://192.168.0.10:8888/service/logout?app=swiftTrends';
 
 
 export function* getToken() {
   try {
     console.log('get token');
-    debugger;
     // Call our request helper (see 'utils/request')
     const userToken = yield call(request, 'https://facebook.github.io/react-native/movies.json');
-    console.log('user tokwn',userToken );
+    console.log('user tokwn', userToken);
     yield put(loginCompleted(userToken));
     // yield put(getUserObjectFromToken());
   } catch (error) {
-    debugger;
     yield put(loginError(error));
   }
 }
@@ -48,7 +43,7 @@ export function* getUserSign() {
 export function* getUserObject() {
   // const token = yield select(makeSelectUserToken());
   const variables = {
-    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlNyaWthbnRoLktvbWF0aXJlZGR5QHVtdXNpYy5jb20iLCJpYXQiOjE1MTk5NzIyNDcsImV4cCI6MTUyMDAwMTA0N30.Y8hbEEVT7jZKWbtGe6eYhBUREUuaIcm86RW2DCYOUmE',
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlNyaWthbnRoLktvbWF0aXJlZGR5QHVtdXNpYy5jb20iLCJpYXQiOjE1MjAzNTc5MjYsImV4cCI6MTUyMDM4NjcyNn0.3cd4IWJTTXLwArecJ0YWHMXY9L0wcFCwH50L1yvMSj4',
     app: 'swiftTrends'
   };
   try {
@@ -56,6 +51,7 @@ export function* getUserObject() {
     yield put(receiveUserObjectFromToken(userobj));
     yield put(initializeArtists(userobj.data.getUserFromToken.applications[0].followedArtists));
     yield put(initializeSubs(userobj.data.getUserFromToken.applications[0].subscriptions[0]));
+    // yield put(initializeArtists(userobj.data.getUserFromToken.applications[0].followedArtists));
   } catch (err) {
     console.log('In saga', err);
   }
